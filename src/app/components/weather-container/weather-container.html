@@ -1,0 +1,23 @@
+<section>
+    <div class="weather-container">
+        @if (error()) {
+            <p [ngStyle]="{'color': 'red'}"> {{error()}}</p>
+        } 
+        @else {
+            @if(weatherData().date){
+                <h1>{{weatherData().city}}</h1>
+                <p>{{weatherData().date | date}}</p>
+                <div class="weather-info">
+                    <h2>{{weatherData().currentTemp}}°C</h2>
+                    <p>{{weatherCodes[weatherData().weatherCode]}}</p>
+                    <div>
+                        <p>Humidity: {{weatherData().humidity}}%</p>
+                        <p>Wind Speed: {{weatherData().windSpeed}} km/h</p>
+                    </div>
+                </div>
+            } @else{
+                <p [ngStyle]="{'color': 'black'}">Weather data will be displayed here</p>
+            }
+        }
+    </div>
+</section>

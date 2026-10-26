@@ -1,0 +1,44 @@
+section{
+    width: 100vw;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    /* width: 70%; */
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 30%);
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+}
+
+.weather-container > h1{
+    text-transform: capitalize;
+}
+
+.weather-container > p{
+    color: rgb(0, 0, 0, 50%);
+    padding: 3px 0 7px 0;
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.weather-info > h2 {
+    font-size: 50px;
+}
+
+.weather-info div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
